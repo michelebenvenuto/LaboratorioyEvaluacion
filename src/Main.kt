@@ -57,8 +57,10 @@ fun main(arg:Array<String>){
             }
             else if(opcion==3) {
                 println(mylista.getMenuListas())
-                }
+                opcion= readLine()!!.toInt()
+                
             }
+        }
     }while(wantsToContinue)
 
 }
