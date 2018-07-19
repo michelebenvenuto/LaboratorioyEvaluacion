@@ -6,10 +6,12 @@ class ListaTareas(
     fun agregarTarea(tarea: Tarea){
         Tareas.add(tarea)
     }
-
-
-    fun seleccionarTarea(){
-        Seleccionada=true
+    fun getMenuTareas():String{
+        var menu= ""
+        for (i in Tareas.indices){
+            menu+="${i+1}  ${Tareas[i]}\n"
+        }
+        return menu
     }
 
     override fun toString(): String {
@@ -17,4 +19,8 @@ class ListaTareas(
             Lista
             nombre: $nombre""".trimIndent()
     }
+    fun getTarea(pos: Int): Tarea{
+        var tarea=Tareas[pos]
+        return tarea
+        }
 }
