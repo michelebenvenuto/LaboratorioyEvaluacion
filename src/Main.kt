@@ -56,11 +56,9 @@ fun main(arg:Array<String>){
                 }
             }
             else if(opcion==3) {
-                for (i in mylista.getMenuListas()) {
-                    println(i)
+                println(mylista.getMenuListas())
                 }
             }
-        }
     }while(wantsToContinue)
 
 }
